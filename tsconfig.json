@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "nodenext",
+        "target": "esnext",
+        "strict": true,
+        "verbatimModuleSyntax": true,
+        "declaration": true,
+        "sourceMap": true,
+        "declarationMap": true,
+        "rootDir": "src",
+        "outDir": "dist"
+    },
+    "include": [
+        "src" //  "src/**/*.ts"
+    ]
+}

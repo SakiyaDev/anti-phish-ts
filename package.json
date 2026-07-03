@@ -1,0 +1,35 @@
+{
+  "name": "anti-phish-ts",
+  "version": "1.0.0",
+  "description": "Anti-Fish API wrapper for Discord bots.",
+  "keywords": [
+    "anti-fish",
+    "anti-phish",
+    "antiphishing",
+    "discord",
+    "sakiyadev",
+    "antifish",
+    "typescript",
+    "antifishts"
+  ],
+  "homepage": "https://github.com/SakiyaDev/anti-phish-ts#readme",
+  "bugs": {
+    "url": "https://github.com/SakiyaDev/anti-phish-ts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SakiyaDev/anti-phish-ts.git"
+  },
+  "license": "MIT",
+  "author": "SakiyaDev",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc-watch",
+    "build": "tsup --clean --dts"
+  },
+  "devDependencies": {
+    "axios": "^1.18.1",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
+  }
+}

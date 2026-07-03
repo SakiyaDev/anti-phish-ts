@@ -1,0 +1,8 @@
+# dependencies
+node_modules
+
+# output
+dist
+
+# Finder (MacOS) folder config
+.DS_Store
