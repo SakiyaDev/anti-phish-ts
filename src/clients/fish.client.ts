@@ -25,7 +25,7 @@ export class Fish {
                     "User-Agent": uAgent
                 },
                 data: {
-                    "message": content.toString()
+                    "message": content
                 }
             });
 

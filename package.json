@@ -24,7 +24,7 @@
   "author": "SakiyaDev",
   "type": "module",
   "scripts": {
-    "dev": "tsc-watch",
+    "dev": "tsc --watch",
     "build": "tsup --clean --dts"
   },
   "devDependencies": {

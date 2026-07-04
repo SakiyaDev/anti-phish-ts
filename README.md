@@ -2,7 +2,7 @@
 
 # Anti-Phish TypeScript
 
-An API wrapper for (Anti-Fish)[https://bitflow.dev/anti-fish] written in TypeScript.
+An API wrapper for [Anti-Fish](https://bitflow.dev/anti-fish) written in TypeScript.
 
 
 ## Installation
@@ -17,6 +17,7 @@ npm i anti-phish-ts
 import { Fish } from "anti-phish-ts"
 import { Client, Events, GatewayIntentBits } from "discord.js"
 
+const fish = new Fish();
 const client = new Client({ 
     intents: [
         GatewayIntentBits.Guilds,
@@ -29,8 +30,8 @@ const client = new Client({
 client.on(Events.MessageCreate, async (message) => {
     const urlCheck = /(?:[A-z0-9](?:[A-z0-9-]{0,61}[A-z0-9])?\.)+[A-z0-9][A-z0-9-]{0,61}[A-z0-9]/i;
     
-    if (urlCheck(message.content)) {
-        const res = await Fish.check(message.content, client.user.username, client.user.id);
+    if (urlCheck.test(message.content)) {
+        const res = await fish.check(message.content, client.user.username, client.user.id);
 
         if (!res.match) return;
 
