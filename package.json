@@ -1,6 +1,6 @@
 {
   "name": "@sakiyadev/anti-phish-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Anti-Fish API wrapper for Discord bots.",
   "keywords": [
     "anti-fish",
