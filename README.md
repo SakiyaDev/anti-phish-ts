@@ -8,13 +8,13 @@ An API wrapper for [Anti-Fish](https://bitflow.dev/anti-fish) written in TypeScr
 ## Installation
 
 ```
-npm i anti-phish-ts
+npm i @sakiyadev/anti-phish-ts
 ```
 
 ## Usage
 
 ```js
-import { Fish } from "anti-phish-ts"
+import { Fish } from "@sakiyadev/anti-phish-ts"
 import { Client, Events, GatewayIntentBits } from "discord.js"
 
 const fish = new Fish();
