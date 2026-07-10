@@ -8,6 +8,8 @@ export default defineConfig({
     clean: true,
     outDir: "dist",
     target: "esnext",
+    shims: true,
+    external: ["axios"],
     dts: {
         compilerOptions: {
             "ignoreDeprecations": "6.0"

@@ -15,8 +15,7 @@ export interface FishData {
 
 
 const api: AxiosInstance = axios.create({
-    url: "https://anti-fish.bitflow.dev/check",
-    method: "POST"
+    baseURL: "https://anti-fish.bitflow.dev",
 });
 
 /**
@@ -32,13 +31,12 @@ export async function check(content: string, name: string, id: string): Promise<
     const urlCheck = /(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+[A-Z0-9][A-Z0-9-]{0,61}[A-Z0-9]/i;
 
     if (urlCheck.test(content)) {
-        const res = await api<FishData>({
+        const res = await api.post<FishData>("/check", {
+            "message": content
+        }, {
             headers: {
                 "User-Agent": uAgent
             },
-            data: {
-                "message": content
-            }
         });
 
         if (!res.data) return null;
