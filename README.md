@@ -14,10 +14,9 @@ npm i @sakiyadev/anti-phish-ts
 ## Usage
 
 ```js
-import { Fish } from "@sakiyadev/anti-phish-ts"
+import { check } from "@sakiyadev/anti-phish-ts"
 import { Client, Events, GatewayIntentBits } from "discord.js"
 
-const fish = new Fish();
 const client = new Client({ 
     intents: [
         GatewayIntentBits.Guilds,
@@ -28,10 +27,10 @@ const client = new Client({
 });
 
 client.on(Events.MessageCreate, async (message) => {
-    const urlCheck = /(?:[A-z0-9](?:[A-z0-9-]{0,61}[A-z0-9])?\.)+[A-z0-9][A-z0-9-]{0,61}[A-z0-9]/i;
+    const urlCheck = /(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+[A-Z0-9][A-Z0-9-]{0,61}[A-Z0-9]/i;
     
     if (urlCheck.test(message.content)) {
-        const res = await fish.check(message.content, client.user.username, client.user.id);
+        const res = await check(message.content, client.user.username, client.user.id);
 
         if (!res.match) return;
 

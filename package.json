@@ -1,6 +1,19 @@
 {
   "name": "@sakiyadev/anti-phish-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "description": "Anti-Fish API wrapper for Discord bots.",
   "keywords": [
     "anti-fish",
@@ -25,7 +38,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsc --watch",
-    "build": "tsup --clean --dts"
+    "build": "tsup"
   },
   "devDependencies": {
     "axios": "^1.18.1",
